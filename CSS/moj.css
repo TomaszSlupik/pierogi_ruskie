@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: black;
+}
+
+section button {
+  margin-right: 20px;
+  margin: 20px;
+  width: 180px;
+  height: 45px;
+  font-size: 25px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.buttonOne {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: purple;
+  border-color: purple;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+
+.buttonOne:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: purple;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+
+.buttonOne:hover {
+  color: #fff;
+}
+
+.buttonOne:hover:after {
+  width: 110%;
+}
+
+.buttonTwo {
+  border-color: #39ff14;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(57, 255, 20, 0.6)), color-stop(5%, rgba(57, 255, 20, 0.6)), color-stop(5%, #39ff14), color-stop(10%, #39ff14), color-stop(10%, rgba(57, 255, 20, 0.6)), color-stop(15%, rgba(57, 255, 20, 0.6)), color-stop(15%, #39ff14), color-stop(20%, #39ff14), color-stop(20%, rgba(57, 255, 20, 0.6)), color-stop(25%, rgba(57, 255, 20, 0.6)), color-stop(25%, #39ff14), color-stop(30%, #39ff14), color-stop(30%, rgba(57, 255, 20, 0.6)), color-stop(35%, rgba(57, 255, 20, 0.6)), color-stop(35%, #39ff14), color-stop(40%, #39ff14), color-stop(40%, rgba(57, 255, 20, 0.6)), color-stop(45%, rgba(57, 255, 20, 0.6)), color-stop(45%, #39ff14), color-stop(50%, #39ff14), color-stop(50%, rgba(57, 255, 20, 0.6)), color-stop(55%, rgba(57, 255, 20, 0.6)), color-stop(55%, #39ff14), color-stop(60%, #39ff14), color-stop(60%, rgba(57, 255, 20, 0.6)), color-stop(65%, rgba(57, 255, 20, 0.6)), color-stop(65%, #39ff14), color-stop(70%, #39ff14), color-stop(70%, rgba(57, 255, 20, 0.6)), color-stop(75%, rgba(57, 255, 20, 0.6)), color-stop(75%, #39ff14), color-stop(80%, #39ff14), color-stop(80%, rgba(57, 255, 20, 0.6)), color-stop(85%, rgba(57, 255, 20, 0.6)), color-stop(85%, #39ff14), color-stop(90%, #39ff14), color-stop(90%, rgba(57, 255, 20, 0.6)), color-stop(95%, rgba(57, 255, 20, 0.6)), color-stop(95%, #39ff14), to(#39ff14));
+  background-image: linear-gradient(to right, rgba(57, 255, 20, 0.6), rgba(57, 255, 20, 0.6) 5%, #39ff14 5%, #39ff14 10%, rgba(57, 255, 20, 0.6) 10%, rgba(57, 255, 20, 0.6) 15%, #39ff14 15%, #39ff14 20%, rgba(57, 255, 20, 0.6) 20%, rgba(57, 255, 20, 0.6) 25%, #39ff14 25%, #39ff14 30%, rgba(57, 255, 20, 0.6) 30%, rgba(57, 255, 20, 0.6) 35%, #39ff14 35%, #39ff14 40%, rgba(57, 255, 20, 0.6) 40%, rgba(57, 255, 20, 0.6) 45%, #39ff14 45%, #39ff14 50%, rgba(57, 255, 20, 0.6) 50%, rgba(57, 255, 20, 0.6) 55%, #39ff14 55%, #39ff14 60%, rgba(57, 255, 20, 0.6) 60%, rgba(57, 255, 20, 0.6) 65%, #39ff14 65%, #39ff14 70%, rgba(57, 255, 20, 0.6) 70%, rgba(57, 255, 20, 0.6) 75%, #39ff14 75%, #39ff14 80%, rgba(57, 255, 20, 0.6) 80%, rgba(57, 255, 20, 0.6) 85%, #39ff14 85%, #39ff14 90%, rgba(57, 255, 20, 0.6) 90%, rgba(57, 255, 20, 0.6) 95%, #39ff14 95%, #39ff14 100%);
+  background-position: 0 0;
+  background-size: 100%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.buttonTwo:hover {
+  background-position: 100px;
+}
+
+.buttonThree {
+  border-color: #00ffff;
+  -webkit-box-shadow: 0 0 40px 40px #00ffff inset, 0 0 0 0 #00ffff;
+          box-shadow: 0 0 40px 40px #00ffff inset, 0 0 0 0 #00ffff;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.buttonThree:hover {
+  -webkit-box-shadow: 0 0 10px 0 #00ffff inset, 0 0 10px 4px #00ffff;
+          box-shadow: 0 0 10px 0 #00ffff inset, 0 0 10px 4px #00ffff;
+}
+
+.buttonFour {
+  border-color: gold;
+  background-image: linear-gradient(45deg, gold 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.buttonFour:hover {
+  background-position: 0;
+}
+
+.img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pictureOne,
+.pictureTwo {
+  margin: 20px 20px;
+  height: 300px;
+  width: 600px;
+  border-radius: 10px;
+}
+
+.dumplings {
+  background-position: center;
+  background-size: cover;
+  background-image: url(../IMG/dumplings.jpg);
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+}
+
+.pizza {
+  background-position: center;
+  background-size: cover;
+  background-image: url(../IMG/pierogi_ruskie_z_czosnkiem_niedzwiedzim.jpg);
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+}
+/*# sourceMappingURL=moj.css.map */

@@ -1,0 +1,180 @@
+@import "./color.scss";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: gray;
+	font-family: "Montserrat", sans-serif;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-color: black;
+	button {
+		margin-right: 20px;
+		margin: 20px;
+		width: 180px;
+		height: 45px;
+		font-size: 25px;
+		border-radius: 15px;
+		text-transform: uppercase;
+		cursor: pointer;
+		overflow: hidden;
+	}
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.buttonOne {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	color: $fourth_color;
+	border-color: $fourth_color;
+	transition: color 150ms ease-in-out;
+
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		background: $fourth_color;
+		width: 0;
+		height: 100%;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+		transition: width 150ms ease-in-out;
+	}
+
+	&:hover {
+		color: #fff;
+		&:after {
+			width: 110%;
+		}
+	}
+}
+
+.buttonTwo {
+	border-color: $first_color;
+	background: {
+		image: linear-gradient(
+			to right,
+			transparentize($first_color, 0.4),
+			transparentize($first_color, 0.4) 5%,
+			$first_color 5%,
+			$first_color 10%,
+			transparentize($first_color, 0.4) 10%,
+			transparentize($first_color, 0.4) 15%,
+			$first_color 15%,
+			$first_color 20%,
+			transparentize($first_color, 0.4) 20%,
+			transparentize($first_color, 0.4) 25%,
+			$first_color 25%,
+			$first_color 30%,
+			transparentize($first_color, 0.4) 30%,
+			transparentize($first_color, 0.4) 35%,
+			$first_color 35%,
+			$first_color 40%,
+			transparentize($first_color, 0.4) 40%,
+			transparentize($first_color, 0.4) 45%,
+			$first_color 45%,
+			$first_color 50%,
+			transparentize($first_color, 0.4) 50%,
+			transparentize($first_color, 0.4) 55%,
+			$first_color 55%,
+			$first_color 60%,
+			transparentize($first_color, 0.4) 60%,
+			transparentize($first_color, 0.4) 65%,
+			$first_color 65%,
+			$first_color 70%,
+			transparentize($first_color, 0.4) 70%,
+			transparentize($first_color, 0.4) 75%,
+			$first_color 75%,
+			$first_color 80%,
+			transparentize($first_color, 0.4) 80%,
+			transparentize($first_color, 0.4) 85%,
+			$first_color 85%,
+			$first_color 90%,
+			transparentize($first_color, 0.4) 90%,
+			transparentize($first_color, 0.4) 95%,
+			$first_color 95%,
+			$first_color 100%
+		);
+		position: 0 0;
+		size: 100%;
+	}
+	transition: background 300ms ease-in-out;
+
+	&:hover {
+		background-position: 100px;
+	}
+}
+
+.buttonThree {
+	border-color: $second_color;
+	box-shadow: 0 0 40px 40px $second_color inset, 0 0 0 0 $second_color;
+	transition: all 150ms ease-in-out;
+
+	&:hover {
+		box-shadow: 0 0 10px 0 $second_color inset, 0 0 10px 4px $second_color;
+	}
+}
+
+.buttonFour {
+	border-color: $third_color;
+	background: {
+		image: linear-gradient(45deg, $third_color 50%, transparent 50%);
+		position: 100%;
+		size: 400%;
+	}
+	transition: background 300ms ease-in-out;
+
+	&:hover {
+		background-position: 0;
+	}
+}
+
+.img {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.pictureOne,
+.pictureTwo {
+	margin: 20px 20px;
+	height: 300px;
+	width: 600px;
+	border-radius: 10px;
+}
+
+.dumplings {
+	background-position: center;
+	background-size: cover;
+	background-image: url(../IMG/dumplings.jpg);
+	box-shadow: 5px 5px 10px black;
+}
+
+.pizza {
+	background-position: center;
+	background-size: cover;
+	background-image: url(../IMG/pierogi_ruskie_z_czosnkiem_niedzwiedzim.jpg);
+	box-shadow: 5px 5px 10px black;
+}
